@@ -57,7 +57,7 @@ export const App = () => {
   return (
     <div className= {style.mainDiv} >
       <h1 className={style.title}>Phonebook</h1>
-      <ContactForm onSbmit={handleSubmit}/>
+      <ContactForm onSubmit={handleSubmit}/>
       <h2 className={style.title}>Contacts</h2>
       <Filter filter={filter} handleChange={handleChange} />
       <ContactsList contacts={getFilteredContacts()} onDeleteContact={deleteContactItem}/>
