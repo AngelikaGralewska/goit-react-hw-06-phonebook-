@@ -29,7 +29,12 @@ export const ContactForm = ({onSubmit}) => {
 
       onSubmit({name, number});
       
-      event.target.name.value.reset();
+      resetForm(); 
+  };
+
+  const resetForm = () => {
+    setName('');
+    setNumber('');
   };
     
   return (
