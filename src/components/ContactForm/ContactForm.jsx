@@ -8,9 +8,9 @@ export const ContactForm = ({onSubmit}) => {
   const [number, setNumber] = useState('');
 
   const handleChange = event => {
-    const { value } = event.target;
+    const { name, value } = event.target;
     
-    switch (value) {
+    switch (name) {
       case 'name':
         setName(value);
         break;
