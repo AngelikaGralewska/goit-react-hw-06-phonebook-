@@ -1,5 +1,5 @@
 import { useSelector , useDispatch} from 'react-redux';
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 import style from './App.module.css';
@@ -50,9 +50,9 @@ export const App = () => {
     return filterContactsList;
   };
 
-  useEffect(() => {
-  localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  //useEffect(() => {
+ // localStorage.setItem('contacts', JSON.stringify(contacts));
+ // }, [contacts]);
 
   return (
     <div className= {style.mainDiv} >
