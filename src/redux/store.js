@@ -27,11 +27,4 @@ export const store = configureStore({
 },
 });
 
-//export const persistSet = {
-//  key: 'contact',
-  //storage,
-//}
-
 export const persistor = persistStore(store);
-
-//export const contactsReducer = persistReducer(persistSet, contactsSlice.reducer);
