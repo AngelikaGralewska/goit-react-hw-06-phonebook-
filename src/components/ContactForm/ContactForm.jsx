@@ -29,10 +29,14 @@ export const ContactForm = ({onSubmit}) => {
 
       onSubmit({name, number});
       
-      event.target.reset(); 
+      reset(); 
   };
-
   
+   const reset = () => {
+      setName('');
+      setNumber('');
+    };
+
   return (
       <form className={style.phonebookInputs} onSubmit={handleSubmit}>
         <label className={style.phonebookInput}>
