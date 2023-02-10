@@ -9,9 +9,20 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
 
-import { contactsReducer } from './contactsSlice';
+//import { contactsReducer } from './contactsSlice';
 import { filtersReducer } from './filtersSlice.js';
+import {contactsSlice} from './contactsSlice.js'
+
+const persistSet ={
+  key: 'contacts',
+  storage,
+};
+
+const contactsReducer = persistReducer(persistSet, contactsSlice.reducer);
+
 
 export const store = configureStore({
   reducer: {
@@ -27,4 +38,9 @@ export const store = configureStore({
 },
 });
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 export const persistor = persistStore(store);

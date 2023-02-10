@@ -5,11 +5,11 @@ export const filterSlice = createSlice({
   initialState: { filter: '' },
   reducers: {
     setFilter(state, action) {
-      state.filter = action.payload;
+      state.filter = action.payload.toLowerCase();
     },
   },
 });
 
 export const { setFilter } = filterSlice.actions;
 export const filtersReducer = filterSlice.reducer;
-export const getFilter = state => state.filter.filter;
+export const getFilter = state => state.filter;
