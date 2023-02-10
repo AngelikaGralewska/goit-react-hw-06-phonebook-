@@ -18,8 +18,8 @@ export const contactsSlice = createSlice({
 
   reducers: {
     addContact(state, action) {
-      state.contacts = [action.payload, ...state.contacts]
-      ///state.contacts = action.payload;
+      ////state.contacts = [action.payload, ...state.contacts]
+      state.contacts = action.payload;
   },
     deleteContact(state, action) { 
         state.contacts = state.contacts.filter(contact => contact.id !== action.payload);      
