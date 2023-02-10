@@ -45,13 +45,10 @@ export const App = () => {
     //);
   };
 
-<<<<<<< Updated upstream
-=======
    // return filterContactsList;
   //};
 
 
->>>>>>> Stashed changes
   return (
     <div className= {style.mainDiv} >
       <h1 className={style.title}>Phonebook</h1>

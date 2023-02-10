@@ -38,9 +38,4 @@ export const store = configureStore({
 },
 });
 
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
 export const persistor = persistStore(store);

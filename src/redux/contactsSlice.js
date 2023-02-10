@@ -17,16 +17,10 @@ export const contactsSlice = createSlice({
   initialState: contactsInitialState,
 
   reducers: {
-<<<<<<< Updated upstream
-    addContact({ contacts }, { payload }) {
-      contacts.push(payload);
-    },
-=======
     addContact(state, action) {
       state.contacts = [action.payload, ...state.contacts]
       ///state.contacts = action.payload;
   },
->>>>>>> Stashed changes
     deleteContact(state, action) { 
         state.contacts = state.contacts.filter(contact => contact.id !== action.payload);      
     },
