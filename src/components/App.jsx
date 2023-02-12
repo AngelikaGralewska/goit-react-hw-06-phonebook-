@@ -16,7 +16,6 @@ export const App = () => {
   const filter = useSelector(getFilter);
 
   const handleSubmit = (data) => {
-    //const name =event.target
     const duplicate = contacts.find(contact => contact.name.toLowerCase() === data.name.toLowerCase());
     if (duplicate) { return alert(`${data.name} is already in contacts`); }
     data.id = nanoid();
@@ -37,16 +36,7 @@ export const App = () => {
     if (!filter) return contacts;
       const filteredContact = filter.toLowerCase();
       return contacts.filter(contact => contact.name.toLowerCase().includes(filteredContact));
-    //onst normalizedFilter = filter.toLowerCase();
-
-    //return contacts.filter(contact =>
-     // contact.name
-      //toLowerCase().includes(normalizedFilter)
-    //);
   };
-
-   // return filterContactsList;
-  //};
 
 
   return (
@@ -59,4 +49,3 @@ export const App = () => {
     </div>
   );
 };
-
